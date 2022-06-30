@@ -1,0 +1,124 @@
+.trainer1 {
+  // height: 68vh;
+  width: 114rem;
+  padding: 4rem;
+  // margin-bottom: 6rem;
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -4rem;
+    height: 4rem;
+    width: 0.1rem;
+  }
+  background-color: #fefefe;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @include respond(tab-land) {
+    //width < 1200px ?
+    max-width: 100rem;
+    top: 25%;
+  }
+
+  @include respond(tab-pot) {
+    //width < 992px ?
+    max-width: 90rem;
+    top: 20%;
+  }
+  @include respond(phone-med) {
+    //width < 768px ?
+    max-width: 70rem;
+  }
+
+  @include respond(phone) {
+    //width < 600px ?
+    max-width: 100%;
+    padding: 4rem;
+    // top: 15%;
+  }
+  @include respond(small-phone) {
+    // top: 13%;
+  }
+
+  &_header {
+    &--1 {
+      display: flex;
+      justify-content: space-between;
+      @include respond(phone-med) {
+        padding-bottom: 1rem;
+      }
+      p {
+        font-size: 2rem;
+        text-transform: capitalize;
+      }
+    }
+    &--2 {
+      p {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        text-transform: capitalize;
+        @include respond(phone-med) {
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  &_form {
+    display: flex;
+    flex-direction: column;
+    input {
+      width: 25%;
+      @include respond(phone-med) {
+        width: 100%;
+      }
+      // @include respond(small-phone) {
+      //   width: 65%;
+      // }
+      border: none;
+      padding: 1rem 2rem;
+      background-color: $color-secondary;
+      border-radius: 0.9rem;
+      font-family: inherit;
+      font-size: 1.3rem;
+      color: #92908f;
+      &::placeholder {
+        color: #92908f;
+      }
+
+      &:focus {
+        outline: none;
+      }
+      margin-top: 2rem;
+    }
+    &-dropdownContainer {
+      &-child2 {
+        display: flex;
+        width: 25%;
+        align-items: center;
+        justify-content: space-between;
+        @include respond(phone-med) {
+          width: 100%;
+        }
+        // @include respond(small-phone) {
+        //   width: 65%;
+        // }
+
+        margin-top: 2rem;
+        p {
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          color: #292524;
+          opacity: 50%;
+        }
+      }
+    }
+    &-btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+    }
+  }
+}
